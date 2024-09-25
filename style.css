@@ -1,0 +1,158 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Center the container in the middle of the page */
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search-box {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#city-input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #66a6ff;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: #89f7fe;
+    box-shadow: 0 0 8px rgba(102, 166, 255, 0.5);
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #66a6ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #89f7fe;
+}
+
+/* Style weather container */
+#weather-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block; /* Setting to display block to show weather info */
+    text-align: left; /* Aligning text to left for a cleaner look */
+    width: 100%; /* Adjusting width */
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.weather-info img {
+    max-width: 80px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+/* Keep the icons consistent as per your design */
+p:nth-child(2)::before {
+    content: '💧'; /* Temperature icon */
+}
+
+p:nth-child(3)::before {
+    content: '🎶'; /* Condition icon */
+}
+
+p:nth-child(4)::before {
+    content: '🛠️'; /* Humidity icon */
+}
+
+p:nth-child(5)::before {
+    content: '🎸'; /* Wind Speed icon */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    #city-input {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #weather-container {
+        width: 100%; /* Ensure the container scales properly on small screens */
+    }
+}
